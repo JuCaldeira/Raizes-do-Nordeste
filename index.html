@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/admin-redirect.js"></script>
+    <title>Raízes do Nordeste</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="home-body">
+    <nav class="site-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        onclick="alternarMenu()"
+      >
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#historia">Nossa história</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#home">Home</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="home-hero" id="home">
+        <div class="home-overlay"></div>
+
+        <div class="home-hero-content">
+          <p class="home-eyebrow">Comida regional feita com afeto</p>
+          <h1>Raízes do Nordeste</h1>
+          <p class="home-subtitle">
+            Sabores que aquecem sua história. Do cuscuz ao baião, da carne de
+            sol aos doces de tacho.
+          </p>
+
+          <div class="home-actions">
+            <button class="btn-principal" type="button" onclick="irEntrar()">
+              Entrar
+            </button>
+            <button class="btn-secundario" type="button" onclick="irCadastro()">
+              Criar conta
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-story" id="historia">
+        <div class="home-grid">
+          <img
+            src="assets/acaraje.jpg"
+            alt="Acarajé servido em tábua com molho"
+          />
+
+          <div>
+            <span class="chamada-secao">Nossa história</span>
+            <h2>Sabores que carregam tradição</h2>
+            <p>
+              A Raízes do Nordeste nasceu do desejo de levar os sabores
+              tradicionais da culinária nordestina para o dia a dia das pessoas.
+              Inspirada nas receitas de família, nossa cozinha valoriza
+              ingredientes regionais, preparo artesanal e o acolhimento típico
+              do Nordeste brasileiro.
+            </p>
+
+            <p>
+              E o que começou como uma pequena lanchonete familiar cresceu sem
+              perder sua essência: servir comida simples, saborosa e feita com
+              carinho.
+            </p>
+            <p>
+              Hoje, conectamos tradição e tecnologia para oferecer uma
+              experiência prática, rápida e acolhedora.
+            </p>
+
+            <ul class="lista-destaques">
+              <li>Ingredientes frescos e selecionados</li>
+              <li>Pratos regionais para todos os momentos</li>
+              <li>Pedidos rápidos para retirada ou entrega</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-menu" id="cardapio">
+        <h2>Favoritos da casa</h2>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img
+              src="assets/produtos/pratos/baiao-de-dois.webp"
+              alt="Baião de Dois"
+            />
+            <div>
+              <h3>Baião de Dois</h3>
+              <p>
+                Arroz, feijão verde, queijo coalho e carne de sol acebolada.
+              </p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="assets/produtos/pratos/carne-de-sol-a-baiana.webp"
+              alt="Escondidinho"
+            />
+            <div>
+              <h3>Escondidinho</h3>
+              <p>Purê de macaxeira cremoso com recheio de carne de sol.</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="assets/produtos/entrada/tapioca-de-cuscuz.webp"
+              alt="Tapioca Recheada"
+            />
+            <div>
+              <h3>Tapioca Recheada</h3>
+              <p>Goma fresquinha com queijo coalho, coco ou carne seca.</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="assets/produtos/entrada/acaraje-da-paloma.webp"
+              alt="Acarajé"
+            />
+            <div>
+              <h3>Acarajé</h3>
+              <p>
+                Bolinho de feijão-fradinho com vatapá;, camarão e vinagrete.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section home-special">
+        <div>
+          <h2>Entre, escolha seu prato e aproveite</h2>
+        </div>
+
+        <div class="home-actions home-actions-inline">
+          <button class="btn-principal" type="button" onclick="irEntrar()">
+            Entrar
+          </button>
+          <button class="btn-secundario" type="button" onclick="irCadastro()">
+            Criar conta
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <p>Raízes do Nordeste - Sabores que carregam tradição</p>
+      <nav class="legal-links" aria-label="Informações legais">
+        <a href="paginas/privacidade.html">Política de Privacidade</a>
+        <a href="paginas/termos.html">Termos de Uso</a>
+      </nav>
+    </footer>
+
+    <script>
+      function irEntrar() {
+        window.location.href = "paginas/entrar.html";
+      }
+
+      function irCadastro() {
+        window.location.href = "paginas/cadastro.html";
+      }
+
+      function alternarMenu() {
+        document.getElementById("navLinks").classList.toggle("nav-open");
+      }
+    </script>
+  </body>
+</html>

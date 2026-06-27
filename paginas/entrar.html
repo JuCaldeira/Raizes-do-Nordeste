@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/admin-redirect.js"></script>
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main class="cadastro-page">
+      <button class="btn-voltar" onclick="window.location.href = '../index.html'">
+        ← Voltar
+      </button>
+
+      <section class="cadastro-card login-card">
+        <h2>Entrar</h2>
+
+        <form class="cadastro-form" onsubmit="login(event)">
+          <div class="campo">
+            <label>E-mail <span>*</span></label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required />
+          </div>
+
+          <div class="campo senha-area">
+            <label>Senha <span>*</span></label>
+            <input type="password" id="senha" placeholder="Digite sua senha" required />
+            <button type="button" class="ver-senha" onclick="mostrarSenha()">
+              👁
+            </button>
+          </div>
+
+          <div class="cadastro-footer login-footer">
+            <button type="submit" class="btn-cadastrar">
+              Entrar
+            </button>
+
+            <p>
+              Ainda não tem conta?
+              <a href="cadastro.html">Cadastre-se</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div
+      class="login-popup"
+      id="loginPopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="loginPopupMensagem"
+    >
+      <div class="login-popup-card">
+        <div class="login-popup-icone" aria-hidden="true"></div>
+        <h2 id="loginPopupMensagem">E-mail ou senha incorretos.</h2>
+        <button type="button" onclick="fecharLoginPopup()">OK</button>
+      </div>
+    </div>
+
+    <script src="../js/entrar.js"></script>
+  </body>
+</html>

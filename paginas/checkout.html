@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="checkout-body">
+    <nav class="site-nav carrinho-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+      <button class="carrinho-voltar" type="button" onclick="voltarCarrinho()">
+        Voltar
+      </button>
+    </nav>
+
+    <main class="checkout-page">
+      <section class="checkout-heading">
+        <h1>Finalizar pedido</h1>
+        <p>
+          Confira os itens, escolha a forma de pagamento e confirme seu pedido.
+        </p>
+        <p class="checkout-aviso-privacidade">
+          Seus dados do pedido serão utilizados para pagamento, entrega e
+          atendimento, conforme nossa
+          <a href="privacidade.html">Política de Privacidade</a>.
+        </p>
+      </section>
+
+      <section class="checkout-layout">
+        <div class="checkout-painel">
+          <section class="checkout-bloco">
+            <div class="checkout-bloco-titulo">
+              <span>1</span>
+              <h2>Resumo do pedido</h2>
+            </div>
+            <div class="checkout-lista" id="checkoutLista"></div>
+          </section>
+
+          <section class="checkout-bloco">
+            <div class="checkout-bloco-titulo">
+              <span>2</span>
+              <h2>Forma de pagamento</h2>
+            </div>
+
+            <div
+              class="checkout-pagamentos"
+              role="radiogroup"
+              aria-label="Forma de pagamento"
+            >
+              <label class="checkout-pagamento-opcao">
+                <input type="radio" name="pagamento" value="Pix" />
+                <span>
+                  <strong>Pix</strong>
+                  <small>Aprovação rápida e sem taxas extras.</small>
+                </span>
+              </label>
+
+              <label class="checkout-pagamento-opcao">
+                <input type="radio" name="pagamento" value="Cartao" />
+                <span>
+                  <strong>Cartão</strong>
+                  <small>Efetue o pagamento via cartão em seu banco.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="checkout-pagamento-detalhe" id="pagamentoDetalhe"></div>
+          </section>
+
+          <section class="checkout-bloco">
+            <div class="checkout-bloco-titulo">
+              <span>3</span>
+              <h2>Recompensas</h2>
+            </div>
+
+            <div class="checkout-fidelidade">
+              <p>
+                Você tem
+                <strong id="pontosFidelidadeCheckout">0 pontos</strong>
+                disponíveis.
+              </p>
+              <div class="checkout-recompensas" id="recompensasLista"></div>
+              <span
+                class="checkout-recompensa-feedback"
+                id="recompensaFeedback"
+              >
+                Ganhe 1 ponto a cada R$ 1,00 em pedidos finalizados.
+              </span>
+            </div>
+          </section>
+
+          <section class="checkout-bloco">
+            <div class="checkout-bloco-titulo">
+              <span>4</span>
+              <h2>Cupons</h2>
+            </div>
+
+            <div class="checkout-cupom">
+              <label for="cupomPedido">Cupom de desconto</label>
+              <div class="checkout-cupom-area">
+                <input
+                  id="cupomPedido"
+                  type="text"
+                  placeholder="Digite seu cupom"
+                />
+                <button type="button" onclick="aplicarCupom()">Aplicar</button>
+              </div>
+              <span class="checkout-cupom-feedback" id="cupomFeedback">
+                Escolha um cupom disponível ou digite o código.
+              </span>
+
+              <div class="checkout-cupons-grupo">
+                <h3>Cupons disponíveis</h3>
+                <div class="checkout-cupons-lista" id="cuponsDisponiveis"></div>
+              </div>
+
+              <div class="checkout-cupons-grupo">
+                <h3>Cupons vencidos</h3>
+                <div class="checkout-cupons-lista" id="cuponsVencidos"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="checkout-resumo">
+          <span>Resumo</span>
+          <div class="checkout-total-linha">
+            <p>Itens</p>
+            <strong id="quantidadeItens">0</strong>
+          </div>
+          <div class="checkout-total-linha">
+            <p>Subtotal</p>
+            <strong id="subtotalPedido">R$ 0,00</strong>
+          </div>
+          <div class="checkout-total-linha">
+            <p>Taxa de entrega</p>
+            <strong id="taxaEntrega">Grátis</strong>
+          </div>
+          <div class="checkout-total-linha">
+            <p>Desconto fidelidade</p>
+            <strong id="descontoFidelidade">R$ 0,00</strong>
+          </div>
+          <div class="checkout-total-linha">
+            <p>Desconto cupom</p>
+            <strong id="descontoCupom">R$ 0,00</strong>
+          </div>
+          <div class="checkout-total-final">
+            <p>Total</p>
+            <strong id="totalPedido">R$ 0,00</strong>
+          </div>
+          <p class="checkout-previsao">Previsão de preparo: 20 a 30 minutos.</p>
+          <button type="button" onclick="confirmarPedido()">
+            Confirmar pedido
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <div class="checkout-barra-fixa" aria-label="Resumo do pagamento">
+      <div>
+        <span>Total</span>
+        <strong id="totalPedidoFixo">R$ 0,00</strong>
+      </div>
+      <button type="button" onclick="confirmarPedido()">Confirmar pedido</button>
+    </div>
+
+    <div
+      class="checkout-popup"
+      id="checkoutPopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkoutPopupMensagem"
+    >
+      <div class="checkout-popup-card">
+        <div class="checkout-popup-icone" id="checkoutPopupIcone"></div>
+        <h2 id="checkoutPopupMensagem">Aguardando pagamento</h2>
+      </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/checkout.js"></script>
+  </body>
+</html>

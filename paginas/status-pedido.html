@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Status do Pedido | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="status-body">
+    <nav class="site-nav carrinho-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+      <button class="carrinho-voltar" type="button" onclick="voltarCardapio()">
+        Cardápio
+      </button>
+    </nav>
+
+    <main class="status-page">
+      <section class="status-heading">
+        <span>Acompanhamento</span>
+        <h1>Status do pedido</h1>
+        <p>Acompanhe a evolução do seu pedido até a entrega.</p>
+      </section>
+
+      <section class="status-layout">
+        <div class="status-painel">
+          <div class="status-card-principal">
+            <div>
+              <span class="status-label">Pedido</span>
+              <h2 id="numeroPedido">#0000</h2>
+            </div>
+            <strong id="statusAtual">Pedido recebido</strong>
+          </div>
+
+          <div class="status-linha-tempo" id="statusLinhaTempo"></div>
+        </div>
+
+        <aside class="status-resumo">
+          <span>Resumo</span>
+          <div class="status-resumo-linha">
+            <p>Pagamento</p>
+            <strong id="pagamentoPedido">-</strong>
+          </div>
+          <div class="status-resumo-linha">
+            <p>Total</p>
+            <strong id="totalPedidoStatus">R$ 0,00</strong>
+          </div>
+          <div class="status-resumo-linha">
+            <p>Previsão</p>
+            <strong id="previsaoPedido">20 a 30 min</strong>
+          </div>
+
+          <div class="status-itens">
+            <h3>Itens do pedido</h3>
+            <div id="itensPedido"></div>
+          </div>
+
+          <button type="button" onclick="voltarCardapio()">
+            Voltar ao cardápio
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/status-pedido.js"></script>
+  </body>
+</html>

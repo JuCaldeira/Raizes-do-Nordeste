@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css?v=2" />
+    <script>
+      if (localStorage.getItem("unidadeSelecionada")) {
+        document.documentElement.classList.add("principal-cardapio-preload");
+      }
+    </script>
+  </head>
+  <body class="principal-body">
+    <nav class="site-nav principal-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+
+      <div class="principal-user">
+        <button
+          class="principal-botao-usuario"
+          type="button"
+          onclick="alternarMenuUsuario()"
+          aria-expanded="false"
+          aria-controls="userMenu"
+        >
+          <span id="saudacaoUsuario">Bem-vindo</span>
+          <span class="principal-user-arrow">&#9662;</span>
+        </button>
+
+        <div class="principal-menu-usuario" id="userMenu">
+          <div class="principal-menu-fidelidade">
+            <span>Pontos de fidelidade</span>
+            <strong id="pontosFidelidadeMenu">0 pontos</strong>
+          </div>
+          <button type="button" onclick="irParaMeusDados()">Meus dados</button>
+          <p class="principal-menu-titulo">Unidades</p>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Mandacaru - Boa Viagem • PE')"
+          >
+            <span>Mandacaru</span>
+            <small>Boa Viagem • PE</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Asa Branca - Rio Vermelho • BA')"
+          >
+            <span>Asa Branca</span>
+            <small>Rio Vermelho • BA</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Panela de Barro - Aldeota • CE')"
+          >
+            <span>Panela de Barro</span>
+            <small>Aldeota • CE</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Sertão - Tambaú • PB')"
+          >
+            <span>Sertão</span>
+            <small>Tambaú • PB</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Gonzagão - Ponta Negra • RN')"
+          >
+            <span>Gonzagão</span>
+            <small>Ponta Negra • RN</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Jangada - Paulista • SP')"
+          >
+            <span>Jangada</span>
+            <small>Paulista • SP</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Brasa - Copacabana • RJ')"
+          >
+            <span>Brasa</span>
+            <small>Copacabana • RJ</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Carcará - Batista Campos • PA')"
+          >
+            <span>Carcará</span>
+            <small>Batista Campos • PA</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Casa de Mainha - Asa Sul • DF')"
+          >
+            <span>Casa de Mainha</span>
+            <small>Asa Sul • DF</small>
+          </button>
+          <button
+            class="principal-unidade-item"
+            type="button"
+            onclick="selecionarUnidade('Xote - Batel • PR')"
+          >
+            <span>Xote</span>
+            <small>Batel • PR</small>
+          </button>
+          <div class="principal-menu-separador"></div>
+          <button
+            class="principal-menu-sair"
+            type="button"
+            onclick="fazerLogoff()"
+          >
+            Sair
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="principal-page">
+      <section class="principal-hero principal-heading" id="principalHero">
+        <h1 id="tituloPrincipal">
+          Escolha uma unidade, faça seu pedido e deleite-se.
+        </h1>
+        <p>
+          Sabores nordestinos em uma experiência simples, acolhedora e feita
+          para o seu momento.
+        </p>
+
+        <div class="principal-favoritos" id="favoritos">
+          <h2>Promoções da semana</h2>
+
+          <div class="principal-favoritos-grid">
+            <article class="principal-favorito-card">
+              <span class="principal-promocao-unidade">
+                <span class="principal-promocao-linha">Mandacaru</span>
+                <span class="principal-promocao-linha">Boa Viagem • PE</span>
+              </span>
+              <h3>Baião de Dois</h3>
+              <p>Arroz, feijão verde, queijo coalho e carne de sol.</p>
+              <div class="principal-promocao-precos">
+                <span class="principal-preco-antigo">R$ 38,30</span>
+                <strong>R$ 33,50</strong>
+              </div>
+            </article>
+
+            <article class="principal-favorito-card">
+              <span class="principal-promocao-unidade">
+                <span class="principal-promocao-linha">Panela de Barro</span>
+                <span class="principal-promocao-linha">Aldeota • CE</span>
+              </span>
+              <h3>Escondidinho</h3>
+              <p>Purê de macaxeira cremoso com recheio de carne de sol.</p>
+              <div class="principal-promocao-precos">
+                <span class="principal-preco-antigo">R$ 43,90</span>
+                <strong>R$ 38,30</strong>
+              </div>
+            </article>
+
+            <article class="principal-favorito-card">
+              <span class="principal-promocao-unidade">
+                <span class="principal-promocao-linha">Gonzagão</span>
+                <span class="principal-promocao-linha">Ponta Negra • RN</span>
+              </span>
+              <h3>Tapioca</h3>
+              <p>Goma fresquinha com queijo coalho, coco ou carne seca.</p>
+              <div class="principal-promocao-precos">
+                <span class="principal-preco-antigo">R$ 18,30</span>
+                <strong>R$ 15,10</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="produtos produtos-ocultos" id="produtos">
+        <!-- produtos via JS depois da escolha da unidade -->
+      </section>
+    </main>
+
+    <footer class="principal-legal-footer">
+      <p>Raízes do Nordeste - Privacidade e transparência</p>
+      <nav class="legal-links" aria-label="Informações legais">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </nav>
+    </footer>
+
+    <footer
+      class="principal-footer principal-footer-oculto"
+      id="principalFooter"
+    >
+      <span class="carrinho-feedback" id="carrinhoFeedback" role="status">
+        Item adicionado
+      </span>
+      <button
+        class="principal-status-button"
+        id="botaoStatusPedido"
+        type="button"
+        onclick="irParaStatusPedido()"
+        aria-label="Acompanhar pedido"
+        title="Acompanhar pedido"
+      >
+        Acompanhar pedido
+      </button>
+      <button
+        class="principal-carrinho-button"
+        type="button"
+        onclick="irParaCarrinho()"
+        aria-label="Ver carrinho"
+        title="Ver carrinho"
+      >
+        Ver carrinho
+      </button>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/principal.js?v=2"></script>
+    <script src="../js/unidade1.js?v=2"></script>
+    <script src="../js/unidade2.js?v=2"></script>
+    <script src="../js/unidade3.js?v=2"></script>
+    <script src="../js/unidade4.js?v=2"></script>
+    <script src="../js/unidade5.js?v=2"></script>
+    <script src="../js/unidade6.js"></script>
+    <script src="../js/unidade7.js"></script>
+    <script src="../js/unidade8.js?v=2"></script>
+    <script src="../js/unidade9.js"></script>
+    <script src="../js/unidade10.js"></script>
+    <script src="../js/pedidos.js?v=3"></script>
+  </body>
+</html>

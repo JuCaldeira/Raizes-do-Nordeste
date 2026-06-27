@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus dados | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main class="cadastro-page">
+      <button
+        class="btn-voltar"
+        type="button"
+        onclick="window.location.href = 'principal.html'"
+      >
+        ← Voltar
+      </button>
+
+      <section class="cadastro-card">
+        <h2>Meus dados</h2>
+
+        <form class="cadastro-form" onsubmit="salvarMeusDados(event)">
+          <div class="linha">
+            <div class="campo">
+              <label for="nome">Nome <span>*</span></label>
+              <input type="text" id="nome" required />
+            </div>
+
+            <div class="campo">
+              <label for="sobrenome">Sobrenome <span>*</span></label>
+              <input type="text" id="sobrenome" required />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" readonly />
+            <p class="meus-dados-ajuda">
+              O CPF identifica a conta e não pode ser alterado nesta página.
+            </p>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone <span>*</span></label>
+            <input type="tel" id="telefone" required />
+          </div>
+
+          <div class="linha">
+            <div class="campo">
+              <label for="endereco">Endereço <span>*</span></label>
+              <input type="text" id="endereco" required />
+            </div>
+
+            <div class="campo">
+              <label for="bairro">Bairro <span>*</span></label>
+              <input type="text" id="bairro" required />
+            </div>
+          </div>
+
+          <div class="linha">
+            <div class="campo">
+              <label for="cidade">Cidade <span>*</span></label>
+              <input type="text" id="cidade" required />
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado <span>*</span></label>
+              <input type="text" id="estado" required />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail <span>*</span></label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="cadastro-footer">
+            <button
+              class="btn-cadastrar btn-excluir-conta"
+              type="button"
+              onclick="solicitarExclusaoConta()"
+            >
+              Excluir conta
+            </button>
+            <button class="btn-cadastrar" type="submit">
+              Salvar alterações
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div
+      class="login-popup cadastro-popup"
+      id="dadosPopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="dadosPopupMensagem"
+    >
+      <div class="login-popup-card cadastro-popup-card">
+        <div
+          class="login-popup-icone cadastro-popup-icone"
+          id="dadosPopupIcone"
+          aria-hidden="true"
+        ></div>
+        <h2 id="dadosPopupMensagem"></h2>
+        <div class="cadastro-popup-actions">
+          <button
+            class="cadastro-popup-cancelar"
+            id="dadosPopupCancelar"
+            type="button"
+            onclick="fecharDadosPopup()"
+          >
+            Cancelar
+          </button>
+          <button id="dadosPopupConfirmar" type="button">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/meus-dados.js"></script>
+  </body>
+</html>

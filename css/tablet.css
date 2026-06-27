@@ -1,0 +1,749 @@
+﻿@media (min-width: 480px) and (max-width: 768px) {
+  .cadastro-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 32px 28px;
+  }
+
+  .btn-voltar {
+    align-self: center;
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .cadastro-card.login-card {
+    max-width: 560px;
+    padding: 30px 32px;
+  }
+
+  .cadastro-card h2 {
+    font-size: 26px;
+  }
+
+  .cadastro-form {
+    gap: 20px;
+  }
+
+  .campo input {
+    height: 46px;
+  }
+
+  .ver-senha {
+    height: 46px;
+  }
+
+  .login-footer {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .login-footer .btn-cadastrar {
+    flex: 0 0 150px;
+  }
+
+  .cadastro-footer:not(.login-footer) {
+    flex-direction: row;
+  }
+
+  .cadastro-footer-cadastro {
+    justify-content: flex-end;
+  }
+
+  .cadastro-footer:not(.login-footer) .btn-cadastrar {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 26px;
+    width: auto;
+  }
+
+  .login-footer p {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .login-popup-card {
+    max-width: 360px;
+    padding: 30px 28px 24px;
+  }
+
+  .login-popup-card h2 {
+    font-size: 22px;
+  }
+
+  .politica-page {
+    padding: 32px 28px;
+  }
+
+  .politica-card {
+    max-width: 680px;
+    padding: 30px 34px 36px;
+  }
+
+  .politica-card h1 {
+    font-size: 28px;
+  }
+
+  .politica-card h2 {
+    font-size: 19px;
+  }
+
+  .politica-card p,
+  .politica-card li {
+    font-size: 15px;
+  }
+
+  .principal-body {
+    --categorias-cardapio-height: 72px;
+    --principal-nav-height: 76px;
+    padding-bottom: 82px;
+  }
+
+  .principal-nav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+
+  .principal-nav .site-brand {
+    font-size: 20px;
+  }
+
+  .principal-user {
+    flex: 0 0 auto;
+  }
+
+  .principal-botao-usuario {
+    font-size: 13px;
+    width: auto;
+    min-width: 220px;
+  }
+
+  .principal-menu-usuario {
+    left: auto;
+    min-width: 280px;
+    right: 0;
+  }
+
+  .admin-page {
+    padding: 36px 24px;
+  }
+
+  .admin-heading {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .admin-resumos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-graficos {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-chart-wide {
+    grid-column: 1 / -1;
+  }
+
+  .admin-chart-produtos {
+    grid-column: 1 / -1;
+  }
+
+  .admin-auditoria-resumos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-financeiro-item {
+    grid-template-columns: minmax(100px, 1fr) minmax(90px, 160px) max-content;
+  }
+
+  .principal-hero {
+    min-height: calc(100vh - 75px);
+    padding: 46px 24px 54px;
+  }
+
+  .principal-hero-cardapio {
+    min-height: 190px;
+    padding: 36px 24px 32px;
+  }
+
+  .principal-heading h1 {
+    font-size: 38px;
+    max-width: 660px;
+  }
+
+  .principal-heading p {
+    font-size: 15px;
+  }
+
+  .principal-favoritos {
+    margin-top: 42px;
+  }
+
+  .principal-favoritos h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+  }
+
+  .principal-favoritos-grid {
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+  }
+
+  .principal-promocao-unidade {
+    box-sizing: border-box;
+    display: block;
+    font-size: clamp(8px, 1.75vw, 11px);
+    line-height: 1.2;
+    margin-left: -14px;
+    margin-right: -14px;
+    max-width: none;
+    overflow: hidden;
+    padding: 5px 6px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% + 28px);
+  }
+
+  .principal-favorito-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    max-width: none;
+    width: 100%;
+  }
+
+  .principal-body .produtos {
+    max-width: 720px;
+    padding: 0 24px;
+  }
+
+  .menu-itens {
+    grid-template-columns: 1fr;
+  }
+
+  .categorias-cardapio {
+    max-width: 720px;
+    top: auto;
+  }
+
+  .categorias-cardapio.categorias-cardapio-fixa {
+    width: min(720px, calc(100% - 48px));
+  }
+
+  .principal-body .menu-item {
+    align-items: center;
+    gap: 18px;
+    grid-template-columns: 160px minmax(0, 1fr) 48px;
+  }
+
+  .menu-item-media {
+    display: contents;
+  }
+
+  .menu-item-imagem {
+    aspect-ratio: auto;
+    height: 116px;
+    width: 160px;
+  }
+
+  .menu-item-preco {
+    color: #c2410c;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .principal-body .card h3,
+  .principal-body .card p {
+    display: block;
+    overflow: visible;
+  }
+
+  .menu-item-acoes {
+    align-self: end;
+    bottom: auto;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: center;
+    position: static;
+    right: auto;
+    transform: translateY(-12px);
+  }
+
+  .carrinho-nav {
+    padding: 14px 28px;
+  }
+
+  .carrinho-body {
+    --carrinho-nav-height: 69px;
+  }
+
+  .checkout-body {
+    --checkout-nav-height: 69px;
+    --checkout-fixed-bar-height: 90px;
+  }
+
+  .carrinho-nav .site-brand {
+    font-size: 20px;
+  }
+
+  .carrinho-voltar {
+    font-size: 14px;
+    min-height: 40px;
+    padding: 0 16px;
+  }
+
+  .carrinho-page {
+    max-width: 720px;
+    padding: 44px 28px 64px;
+  }
+
+  .carrinho-heading {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .carrinho-heading h1 {
+    font-size: 42px;
+  }
+
+  .carrinho-heading p {
+    font-size: 17px;
+  }
+
+  .carrinho-layout {
+    gap: 22px;
+  }
+
+  .carrinho-lista {
+    gap: 14px;
+  }
+
+  .carrinho-item {
+    align-items: center;
+    gap: 18px;
+    grid-template-columns: 140px minmax(0, 1fr) auto;
+    padding: 16px;
+  }
+
+  .carrinho-item img {
+    aspect-ratio: 4 / 3;
+    grid-row: 1;
+    width: 140px;
+  }
+
+  .carrinho-item-info h3 {
+    display: block;
+    font-size: 20px;
+    overflow: visible;
+  }
+
+  .carrinho-item-info p {
+    display: block;
+    font-size: 15px;
+    line-height: 1.45;
+    overflow: visible;
+  }
+
+  .carrinho-item-acoes {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    grid-column: 3;
+  }
+
+  .carrinho-item-acoes strong {
+    font-size: 17px;
+  }
+
+  .carrinho-item-acoes button {
+    font-size: 13px;
+    min-height: 36px;
+    padding: 0 12px;
+  }
+
+  .carrinho-resumo {
+    padding: 22px;
+  }
+
+  .carrinho-entrega-aviso {
+    font-size: 12px;
+    line-height: 1.35;
+    padding: 10px 12px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .carrinho-resumo h2 {
+    font-size: 28px;
+  }
+
+  .checkout-page {
+    max-width: 720px;
+    padding: 44px 28px 64px;
+  }
+
+  .checkout-heading {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .checkout-heading h1 {
+    font-size: 42px;
+  }
+
+  .checkout-heading p {
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
+
+  .checkout-layout {
+    gap: 22px;
+  }
+
+  .checkout-painel {
+    gap: 16px;
+  }
+
+  .checkout-bloco,
+  .checkout-resumo {
+    padding: 22px;
+  }
+
+  .checkout-bloco-titulo h2 {
+    font-size: 24px;
+  }
+
+  .checkout-lista {
+    gap: 14px;
+  }
+
+  .checkout-item {
+    align-items: center;
+    gap: 18px;
+    grid-template-columns: 140px minmax(0, 1fr) auto;
+  }
+
+  .checkout-item img {
+    aspect-ratio: 4 / 3;
+    grid-row: 1;
+    width: 140px;
+  }
+
+  .checkout-item h3 {
+    display: block;
+    font-size: 20px;
+    overflow: visible;
+  }
+
+  .checkout-item p {
+    display: block;
+    font-size: 14px;
+    line-height: 1.45;
+    overflow: visible;
+  }
+
+  .checkout-item strong {
+    align-self: center;
+    font-size: 17px;
+    grid-column: 3;
+    white-space: nowrap;
+  }
+
+  .checkout-pagamentos,
+  .checkout-recompensas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .checkout-pagamento-opcao,
+  .checkout-recompensa-opcao {
+    align-items: start;
+  }
+
+  .checkout-cupom-area {
+    grid-template-columns: minmax(0, 1fr) 140px;
+  }
+
+  .checkout-cupom-card {
+    padding: 14px;
+  }
+
+  .checkout-pix-area {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .checkout-pix-chave {
+    flex: 1 1 auto;
+  }
+
+  .checkout-resumo {
+    position: static;
+  }
+
+  .checkout-total-linha p,
+  .checkout-total-final p,
+  .checkout-previsao {
+    font-size: 15px;
+  }
+
+  .checkout-total-final strong {
+    font-size: 26px;
+  }
+
+  .checkout-barra-fixa {
+    left: 50%;
+    max-width: 720px;
+    padding: 14px 28px;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .checkout-barra-fixa strong {
+    font-size: 24px;
+  }
+
+  .checkout-barra-fixa button {
+    font-size: 14px;
+    min-height: 48px;
+    padding: 0 22px;
+  }
+
+  .status-body {
+    --status-nav-height: 69px;
+  }
+
+  .status-page {
+    max-width: 720px;
+    padding: 44px 28px 64px;
+  }
+
+  .status-heading {
+    margin-bottom: 28px;
+  }
+
+  .status-heading h1 {
+    font-size: 42px;
+  }
+
+  .status-heading p {
+    font-size: 17px;
+    max-width: 560px;
+  }
+
+  .status-layout,
+  .status-painel {
+    gap: 18px;
+  }
+
+  .status-card-principal,
+  .status-linha-tempo,
+  .status-resumo,
+  .status-vazio {
+    padding: 22px;
+  }
+
+  .status-card-principal {
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 0fr);
+  }
+
+  .status-card-principal h2 {
+    font-size: 34px;
+  }
+
+  .status-card-principal strong {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .status-linha-tempo {
+    gap: 0;
+  }
+
+  .status-etapa {
+    gap: 16px;
+    grid-template-columns: 46px minmax(0, 1fr);
+    padding-bottom: 28px;
+  }
+
+  .status-etapa:not(:last-child)::after {
+    height: calc(100% - 46px);
+    left: 22px;
+    top: 46px;
+  }
+
+  .status-etapa-marcador {
+    height: 46px;
+    width: 46px;
+  }
+
+  .status-etapa-marcador i {
+    font-size: 22px;
+  }
+
+  .status-etapa h3 {
+    font-size: 20px;
+  }
+
+  .status-etapa p {
+    font-size: 15px;
+  }
+
+  .status-resumo {
+    position: static;
+  }
+
+  .status-resumo-linha,
+  .status-item {
+    padding: 12px 0;
+  }
+
+  .status-resumo-linha p,
+  .status-item span,
+  .status-resumo-linha strong,
+  .status-item strong {
+    font-size: 15px;
+  }
+
+  .status-itens h3 {
+    font-size: 20px;
+  }
+
+  .status-resumo button,
+  .status-vazio button {
+    font-size: 14px;
+  }
+
+  .home-body main,
+  .home-body .home-section,
+  .home-body .home-hero {
+    max-width: 100%;
+  }
+
+  .home-body .site-nav {
+    padding: 14px 24px;
+  }
+
+  .home-body main {
+    padding-top: 68px;
+  }
+
+  .home-body .nav-toggle {
+    flex-basis: auto;
+    min-width: 74px;
+    padding: 0 16px;
+    width: auto;
+  }
+
+  .home-body .nav-toggle .bi {
+    display: none;
+  }
+
+  .home-body .nav-toggle::before {
+    content: "MENU";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .home-body .site-brand {
+    font-size: 22px;
+  }
+
+  .home-hero {
+    padding: 44px 18px;
+    width: 100%;
+  }
+
+  .home-hero-content {
+    max-width: 620px;
+  }
+
+  .home-hero-content h1 {
+    font-size: clamp(40px, 9vw, 52px);
+    white-space: nowrap;
+  }
+
+  .home-subtitle {
+    font-size: 18px;
+  }
+
+  .home-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: 560px;
+  }
+
+  .home-section {
+    padding: 30px 24px;
+  }
+
+  .home-story {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .home-story .home-grid {
+    gap: 28px;
+  }
+
+  .home-story .home-grid img {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .home-section h2 {
+    font-size: 38px;
+  }
+
+  .home-section p {
+    font-size: 17px;
+  }
+
+  .menu-grid {
+    gap: 18px;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
+
+  .menu-card {
+    gap: 16px;
+    grid-template-columns: 128px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .menu-card img {
+    width: 128px;
+  }
+
+  .menu-card h3 {
+    font-size: 19px;
+  }
+
+  .menu-card p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .home-special {
+    text-align: center;
+  }
+
+  .home-special h2 {
+    font-size: clamp(20px, 4.4vw, 24px);
+    max-width: 100%;
+  }
+}
+
+/* Totem */

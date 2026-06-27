@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de vendas | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="principal-body admin-body">
+    <nav class="site-nav principal-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+
+      <div class="principal-user">
+        <button
+          class="principal-botao-usuario"
+          type="button"
+          id="adminMenuButton"
+          aria-expanded="false"
+          aria-controls="adminMenu"
+        >
+          <span>Bem-vindo Adm</span>
+          <span class="principal-user-arrow">&#9662;</span>
+        </button>
+        <div class="principal-menu-usuario admin-menu" id="adminMenu">
+          <button type="button" id="adminLogout">Sair</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="admin-page">
+      <header class="admin-heading">
+        <div>
+          <span class="admin-eyebrow">Visão geral</span>
+          <h1>Painel de vendas</h1>
+          <p>Acompanhe o desempenho dos pedidos realizados no site.</p>
+        </div>
+      </header>
+
+      <section class="admin-resumos" aria-label="Resumo das vendas">
+        <article class="admin-resumo-card">
+          <span>Faturamento total</span>
+          <strong id="adminFaturamento">R$ 0,00</strong>
+          <small>Pedidos confirmados</small>
+        </article>
+        <article class="admin-resumo-card">
+          <span>Total de pedidos</span>
+          <strong id="adminPedidos">0</strong>
+          <small>Vendas registradas</small>
+        </article>
+        <article class="admin-resumo-card">
+          <span>Ticket médio</span>
+          <strong id="adminTicket">R$ 0,00</strong>
+          <small>Valor médio por pedido</small>
+        </article>
+        <article class="admin-resumo-card admin-resumo-pagamentos">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Formas de pagamento</h2>
+              <p>Distribuição dos pedidos</p>
+            </div>
+          </div>
+          <div class="admin-pagamentos" id="graficoPagamentos"></div>
+        </article>
+      </section>
+
+      <section class="admin-graficos">
+        <article class="admin-chart-card admin-chart-wide">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Vendas nos últimos 6 meses</h2>
+              <p>Faturamento mensal</p>
+            </div>
+          </div>
+          <div class="admin-canvas-wrap">
+            <canvas
+              id="graficoVendas"
+              role="img"
+              aria-label="Gráfico de vendas dos últimos seis meses"
+            ></canvas>
+          </div>
+        </article>
+
+        <article class="admin-chart-card">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Vendas por unidade</h2>
+              <p>Faturamento de cada restaurante</p>
+            </div>
+          </div>
+          <div
+            class="admin-ranking admin-ranking-financeiro"
+            id="vendasPorUnidade"
+          ></div>
+        </article>
+
+        <article class="admin-chart-card">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Vendas por região</h2>
+              <p>Faturamento por região do Brasil</p>
+            </div>
+          </div>
+          <div
+            class="admin-ranking admin-ranking-financeiro"
+            id="vendasPorRegiao"
+          ></div>
+        </article>
+
+        <article class="admin-chart-card admin-chart-produtos">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Produtos mais vendidos</h2>
+              <p>Quantidade por produto</p>
+            </div>
+          </div>
+          <div
+            class="admin-ranking admin-ranking-financeiro"
+            id="rankingProdutos"
+          ></div>
+        </article>
+
+        <article class="admin-chart-card admin-auditoria-card">
+          <div class="admin-chart-heading">
+            <div>
+              <h2>Auditoria de operações sensíveis</h2>
+              <p>Cancelamentos, descontos e ajustes com rastreabilidade.</p>
+            </div>
+          </div>
+          <div class="admin-auditoria-resumos" id="auditoriaResumo"></div>
+          <div class="admin-auditoria-tabela-wrap">
+            <table class="admin-auditoria-tabela">
+              <thead>
+                <tr>
+                  <th>Data/Hora</th>
+                  <th>Operador</th>
+                  <th>Unidade</th>
+                  <th>Operaçao</th>
+                  <th>Pedido</th>
+                  <th>Impacto</th>
+                  <th>Motivo</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="auditoriaTabela"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

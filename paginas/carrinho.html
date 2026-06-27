@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="carrinho-body">
+    <nav class="site-nav carrinho-nav">
+      <p class="site-brand">Raízes do Nordeste</p>
+      <button class="carrinho-voltar" type="button" onclick="voltar()">
+        Voltar ao Cardápio
+      </button>
+    </nav>
+
+    <main class="carrinho-page">
+      <section class="carrinho-heading">
+        <h1>Seu carrinho</h1>
+        <p>Revise os itens do pedido antes de finalizar.</p>
+      </section>
+
+      <section class="carrinho-layout">
+        <div class="carrinho-lista" id="listaCarrinho"></div>
+
+        <aside class="carrinho-resumo">
+          <span>Resumo</span>
+          <h2 id="total">Total: R$ 0,00</h2>
+          <p class="carrinho-entrega-aviso">
+            Entrega grátis para pedidos acima de R$ 100,00
+          </p>
+          <button type="button" onclick="irParaPagamento()">
+            Finalizar pedido
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/carrinho.js"></script>
+  </body>
+</html>
