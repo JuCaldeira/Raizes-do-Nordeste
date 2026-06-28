@@ -6,11 +6,12 @@ Aplicação web de delivery inspirada na culinária nordestina, desenvolvida com
 
 - [Prévia](#prévia)
 - [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
+- [Arquitetura](#arquitetura)
 - [Como executar](#como-executar)
 - [Como acessar o site](#como-acessar-o-site)
 - [Como testar a jornada do cliente](#como-testar-a-jornada-do-cliente)
 - [Acesso administrativo](#acesso-administrativo)
+- [LGPD e Privacidade](#lgpd-e-privacidade)
 - [Responsividade](#responsividade)
 - [Observações](#observações)
 
@@ -40,12 +41,16 @@ Aplicação web de delivery inspirada na culinária nordestina, desenvolvida com
 - Painel administrativo com faturamento, pedidos, ticket médio e rankings;
 - Layout responsivo para mobile, tablet, totem e desktop.
 
-## Tecnologias
+## Arquitetura
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- Web Storage API (`localStorage` e `sessionStorage`)
+O projeto foi desenvolvido utilizando arquitetura front-end baseada em componentes e armazenamento local, utilizando:
+
+- HTML5 para estruturação;
+- CSS3 para estilização e responsividade;
+- JavaScript para regras de negócio e interação;
+- localStorage para persistência dos dados;
+- sessionStorage para controle de sessão;
+- dados mockados para demonstração de funcionalidades administrativas.
 - Bootstrap Icons via CDN
 - Canvas API para o gráfico do painel administrativo
 
@@ -67,6 +72,7 @@ python -m http.server 8000
 Acesse o projeto diretamente clicando [aqui](https://jucaldeira.github.io/Raizes-do-Nordeste/)
 
 > A conexão com a internet é necessária para carregar os ícones fornecidos pelo CDN do Bootstrap Icons.
+> O acesso à versão hospedada no GitHub Pages também requer conexão com a internet.
 
 ## Como testar a jornada do cliente
 
@@ -93,6 +99,17 @@ O painel administrativo utiliza dados fictícios para simular indicadores gerenc
 
 - **E-mail:** `admin@raizes.com.br`
 - **Senha:** `Admin@123`
+
+## LGPD e Privacidade
+
+A aplicação implementa mecanismos básicos relacionados à Lei Geral de Proteção de Dados (LGPD), incluindo:
+
+- consentimento explícito durante o cadastro;
+- Termos de Uso;
+- Política de Privacidade;
+- validação do aceite;
+- possibilidade de edição dos dados cadastrais;
+- utilização exclusiva de armazenamento local para fins acadêmicos.
 
 ## Responsividade
 
