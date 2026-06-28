@@ -1,8 +1,18 @@
 ﻿# Raízes do Nordeste
 
-Aplicação web responsiva de delivery inspirada na culinária nordestina. O projeto permite criar uma conta, escolher uma unidade, navegar pelo cardápio, montar um pedido, aplicar benefícios, finalizar a compra e acompanhar o andamento da entrega.
+Aplicação web de delivery inspirada na culinária nordestina, desenvolvida como projeto final do meu curso de ADS. O sistema permite cadastro de clientes, seleção de unidades, realização de pedidos, aplicação de benefícios, acompanhamento da entrega e visualização de relatórios gerenciais simulados.
 
-Desenvolvido como projeto acadêmico da **UNINTER**, utilizando apenas tecnologias web nativas.
+## Sumário
+
+- [Prévia](#prévia)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Como executar](#como-executar)
+- [Como acessar o site](#como-acessar-o-site)
+- [Como testar a jornada do cliente](#como-testar-a-jornada-do-cliente)
+- [Acesso administrativo](#acesso-administrativo)
+- [Responsividade](#responsividade)
+- [Observações](#observações)
 
 ## Prévia
 
@@ -17,18 +27,18 @@ Desenvolvido como projeto acadêmico da **UNINTER**, utilizando apenas tecnologi
 ## Funcionalidades
 
 - Página inicial com apresentação da marca e destaques do cardápio;
-- cadastro de clientes com aceite dos Termos de Uso e da Política de Privacidade;
-- autenticação e proteção das páginas internas;
-- edição dos dados cadastrais;
-- seleção entre 10 unidades e carregamento do cardápio correspondente;
-- produtos organizados por categorias;
-- carrinho com inclusão, remoção e cálculo do total;
-- checkout com pagamento via Pix ou cartão;
-- cupons de desconto, frete grátis e recompensas por fidelidade;
-- acúmulo de pontos após a conclusão de pedidos;
-- acompanhamento simulado das etapas do pedido;
-- painel administrativo com faturamento, pedidos, ticket médio e rankings;
-- layout responsivo para mobile, tablet, totem e desktop.
+- Cadastro de clientes com aceite dos Termos de Uso e da Política de Privacidade;
+- Autenticação e proteção das páginas internas;
+- Edição dos dados cadastrais;
+- Seleção entre 10 unidades e carregamento do cardápio correspondente;
+- Produtos organizados por categorias;
+- Carrinho com inclusão, remoção e cálculo do total;
+- Checkout com pagamento via Pix ou cartão;
+- Cupons de desconto, frete grátis e recompensas por fidelidade;
+- Acúmulo de pontos após a conclusão de pedidos;
+- Acompanhamento simulado das etapas do pedido;
+- Painel administrativo com faturamento, pedidos, ticket médio e rankings;
+- Layout responsivo para mobile, tablet, totem e desktop.
 
 ## Tecnologias
 
@@ -52,8 +62,9 @@ Também é possível usar o servidor nativo do Python:
 ```bash
 python -m http.server 8000
 ```
+## Como acessar o site
 
-Depois, acesse [http://localhost:8000](http://localhost:8000) no navegador.
+Acesse o projeto diretamente clicando [aqui](https://jucaldeira.github.io/Raizes-do-Nordeste/)
 
 > A conexão com a internet é necessária para carregar os ícones fornecidos pelo CDN do Bootstrap Icons.
 
@@ -82,21 +93,6 @@ O painel administrativo utiliza dados fictícios para simular indicadores gerenc
 
 - **E-mail:** `admin@raizes.com.br`
 - **Senha:** `Admin@123`
-
-## Estrutura do projeto
-
-```text
-.
-├── assets/             # Imagens da interface, produtos e screenshots
-│   └── screenshots/    # Prints usados na prévia do README
-├── css/                # Estilos base e adaptações responsivas
-├── js/                 # Regras de autenticação, pedidos e interface
-│   ├── unidade1.js     # Cardápios das unidades
-│   └── ...
-├── paginas/            # Telas internas da aplicação
-├── index.html          # Página inicial
-└── README.md           # Documentação do projeto
-```
 
 ## Responsividade
 
